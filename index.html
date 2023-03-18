@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text to Speech</title>
+    <link rel="shortcut icon" href="/favicon/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <section>
+    <h2>Text to Speech</h2>
+
+    <div class="txt-area-container">
+        <div class="col-1">
+            <p>Enter your text:</p>
+            <textarea name="text" id="text-area" cols="60" rows="10"></textarea>
+            <p id="word-count"></p>
+            <div class="action-area">
+                <div class="copy-wrapper">
+                    <div class="copy-area"> 
+                    <img class="copy" src="/images/icons8-clone-figure-32.png" alt="">
+                    <p id="copy-txt"></p>
+                    </div>
+                    <img class="delete" src="/images/icons8-trash-can-32.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="features-container">
+        <div class="ft-col1">
+            <select name="voices" id="voices">  
+            </select>
+            <div class="action-btn">
+                <img src="/images/stop.png" class="stop-btn">
+                <img src="/images/play.png" alt="" class="speak">
+                <img src="/images/pause.png" alt="" class="pause-btn">
+            </div>
+        </div>
+
+        <div class="main-ft">
+            <label for="speed">Speed</label>
+            <input type="range" id="speed-slider" class="speed-slider slider"
+             min="0.0" max="2" step="0.1" value="1" list="marker">
+            
+            <div class="speed-indicator range-indicator">0</div>
+        </div>
+        <div class="main-ft">
+            <label for="speed">Pitch</label>
+            <input type="range" id="pitch-slider" class="pitch-slider slider" min="0" max="2" step="0.1" value="1">
+            <div class="pitch-indicator range-indicator">0</div>
+        </div>
+        <div class="main-ft">
+            <label for="speed">Volume</label>
+            <input type="range" id="volume-slider" class="volume-slider slider" min="0" step="0.1" max="2" value="1">
+            <div class="volume-indicator range-indicator">0</div>
+        </div>
+
+    </div>
+</section>
+
+<script src="index.js"></script>
+</body>
+</html>

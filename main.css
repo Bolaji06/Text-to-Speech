@@ -1,0 +1,221 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+:root{
+    --body-dark: rgb(32, 32, 32);
+    --col-bg: rgb(71, 71, 71);
+}
+body{
+    font-family: sans-serif;
+    background-color: var(--body-dark);
+}
+h2{
+    text-align: center;
+    color: white;
+    font-size: 1.2rem;
+    margin: 10px;
+}
+.txt-area-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--col-bg);
+    margin: 10px 20px;
+    border-radius: 8px;
+    padding: 10px 20px;
+}
+.col-1 p{
+    color: rgb(204, 204, 204);
+    font-size: .9rem;
+    text-align: center;
+    margin-bottom: 12px;
+
+}
+textarea{
+    padding: 5px 12px;
+    box-shadow: inset 0 0 8px rgb(56, 56, 56);
+    background-color: transparent;
+    border: none;
+    outline: none;
+    resize: none;
+    font-size: 1rem;
+    width: 100%;
+    color: aliceblue;
+}
+.copy-wrapper{
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0;
+}
+.sound-wave{
+    width: 46px;
+}
+img{
+    padding: 8px;
+    border-radius: 50%;
+    width: 40px;
+}
+.copy,
+.speak{
+    background-color: rgb(3, 121, 175);
+}
+.copy-area{
+    display: flex;
+    align-items: center;
+}
+#copy-txt{
+    margin-top: 10px;
+    text-align: center;
+    margin-left: 4px;
+    color: #c1c5cf;
+    font-size: .8rem;
+    display: none;
+}
+.copy:hover,.speak:hover,.delete:hover{
+    opacity: .7;
+    cursor: pointer;
+}
+/* .speak{
+    padding: 0;
+    width: 50px;
+    border-radius: 50%;
+} */
+.delete{
+    background-color: rgb(241, 21, 131);
+}
+option:hover{
+    opacity: .8;
+    cursor: pointer;
+}
+select:hover{
+    opacity: .8;
+    cursor: pointer;
+}
+input[type='range']:hover{
+    opacity: .8;
+
+}
+#word-count{
+    color: rgb(211, 211, 211);
+    font-size: .8rem;
+    padding: 6px 0;
+    text-align: left;
+}
+.ft-col1{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.features-container{
+    margin: 2px 20px;
+    background-color: var(--col-bg);
+    border-radius: 8px;
+    padding: 0 10px;
+    padding: 10px ;
+}
+select{
+    background-color: rgb(51, 58, 58);
+    border-radius: 20px;
+    outline: none;
+    border: none;
+    padding: 8px;
+    font-weight: 600;
+    color: rgb(14, 228, 14);
+    width: 60%;
+}
+option{
+    font-weight: 500;
+    color: rgb(218, 218, 218);
+}
+.main-ft{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+.stop-btn,
+.pause-btn{
+    cursor: pointer;
+}
+.stop-btn:hover,
+.pause-btn:hover{
+    background-color: #6697ff;
+    border-radius: 50%;
+}
+label{
+    color: #d9e7f3;
+    font-size: .8rem;
+}
+#speed-slider,
+#pitch-slider,
+#volume-slider{
+    border-radius: 5px;
+    width: 80%;
+    height: 4px;
+    max-width: 400px;
+    cursor: pointer;
+    margin: 0 10px;   
+}
+#pitch-slider{
+    height: 3.7px;
+}
+.slider::-moz-range-thumb{
+    appearance: none;
+    -moz-appearance: none;
+    border: none;
+    height: 18px;
+    width: 18px;
+    border-radius: 50%;
+}
+.slider::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    appearance: none;
+    border: none;
+    height: 18px;
+    width: 18px;
+    border-radius: 50%;
+}
+.speed-slider::-moz-range-thumb,
+.speed-slider::-webkit-slider-thumb{
+    background-color: yellow;
+}
+.pitch-slider::-moz-range-thumb,
+.pitch-slider::-webkit-slider-thumb{
+    background-color: rgb(255, 0, 191);
+}
+.volume-slider::-moz-range-thumb,
+.volume-slider::-webkit-slider-thumb{
+    background-color: rgb(0, 81, 255);
+}
+
+.range-indicator{
+    background-color: rgb(51, 47, 43);
+    width: 20px;
+    padding: 2px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: antiquewhite;
+    font-size: .7rem;
+    border-radius: 50%;
+}
+
+@media (max-width: 900px){
+    .ft-col1{
+        justify-content: space-between;
+    }
+}
+@media (max-width: 385px){
+    .ft-col1{
+        flex-direction: column;
+    }
+    .action-btn{
+        margin-top: 10px;
+    }
+    select{
+        width: 100%;
+    }
+}
