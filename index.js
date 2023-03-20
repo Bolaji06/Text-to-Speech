@@ -83,7 +83,7 @@ speakEl.addEventListener('click', ()=>{
         synth.resume();
     }
     else{
-        speakText()
+        speakText();
     }
     return;
 });
@@ -92,7 +92,9 @@ stopBtn.addEventListener('click', ()=>{
     synth.cancel()
 });
 pauseBtn.addEventListener('click', ()=>{
-    synth.pause();
+   if (synth.speaking){
+        synth.pause();
+   }
 });
 
 
@@ -115,6 +117,7 @@ function copyToClipboard(){
     }
    
 }
+copyEl.addEventListener('click', copyToClipboard);
 
 function deleteText(){
     const deleteMsg = textAreaEl.value;
@@ -122,7 +125,6 @@ function deleteText(){
         textAreaEl.value = '';
     }
 }
-copyEl.addEventListener('click', copyToClipboard);
 deleteEl.addEventListener('click', deleteText);
 
 function populateVoices(){
@@ -146,14 +148,13 @@ function populateVoices(){
     for (let voice of voices){
         const optionEl = document.createElement('option');
         optionEl.textContent = `${voice.name} ${voice.lang}`;
-        //optionEl.setAttribute('value', voice.name);
+        
         optionEl.setAttribute('data-lang', voice.lang);
         optionEl.setAttribute('data-name', voice.name);
 
         if (voice.default){
             optionEl.textContent = `${voice.name} ${voice.lang} - DEFAULT`
         }
-
         selectEl.appendChild(optionEl);
     }
     selectEl.selectedIndex = selectedIndex;
